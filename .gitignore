@@ -1,23 +1,36 @@
-.DS_Store
+# ETC
 .idea
-app/frontend/package.json.md5
-xbarapp.com/public/docs/
-tools/sitegen/sitegen
-app/node_modules
+**/.DS_Store
+**/.version
+**/node_modules
+**/package-lock.json
 app/build/bin
-pkg/update/testarea
-xbarapp.com/node_modules
-xbarapp.com/public/docs
-xbarapp.com/package-lock.json
 app/build/darwin/info.plist
-app/frontend/package-lock.json
-app/build/.DS_Store
-app/.DS_Store
-xbarapp.com/public/.DS_Store
-tools/sitegen/.version
-app/.version
-xbarapp.com/.version
-xbarapp.com/xbarappcom
+app/frontend/package.json.md5
+pkg/update/testarea
+tools/bloggen/
+tools/sitegen/sitegen
+xbarapp.com/public/docs
+xbarapp.com/public/docs/
 xbarapp.com/version.gen.go
-tools/bloggen/.version
-pkg/.DS_Store
+xbarapp.com/xbarappcom
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
