@@ -8,6 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"sync"
+	"strconv"
 	"time"
 
 	"github.com/pkg/errors"
@@ -165,7 +166,12 @@ func newApp() (*app, error) {
 }
 
 func (app *app) Start(runtime *wails.Runtime) {
-	app.setDarkMode(runtime.System.IsDarkMode())
+	xbarDarkModeEnv := os.Getenv("XBARDarkMode")
+    xbarDarkMode, err := strconv.ParseBool(xbarDarkModeEnv)
+    if err != nil {
+        xbarDarkMode = false
+    }
+    app.setDarkMode(runtime.System.IsDarkMode() || xbarDarkMode)
 	runtime.Events.OnThemeChange(func(darkMode bool) {
 		// keep track of dark mode changing, and refresh all
 		// plugins if it does.
