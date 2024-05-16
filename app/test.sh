@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 
-VERSION=`git describe --tags`
+VERSION=$(git describe --tags)
 echo -n $VERSION > .version
 
 go test
