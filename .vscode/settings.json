@@ -1,5 +1,10 @@
 {
-    "files.exclude": {
-        "archive": true
-    }
+  "go.goroot": "${env:GOROOT}",
+  "go.testTimeout": "180s",
+  "go.toolsEnvVars": {
+    "GOPROXY": "https://proxy.golang.org,direct"
+  },
+  "files.exclude": {
+    "archive": true
+  }
 }
